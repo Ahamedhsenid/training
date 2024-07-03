@@ -18,29 +18,34 @@ public class Main {
 
 
                 switch (choice) {
-                    case 1:
-                            System.out.println("Enter side length of Square");
-                            double side = scanner.nextDouble();
-                            shape = new Square(side);
-                            break;
-                    case 2:
+                    case 1 ->  {
+                        System.out.println("Enter side length of Square");
+                        double side = scanner.nextDouble();
+                        shape = new Square(side);
+                    }
+
+                    case 2 -> {
                         System.out.println("Enter height of rectangle");
                         double height = scanner.nextDouble();
                         System.out.println("enter width of rectangle");
                         double width = scanner.nextDouble();
                         shape = new Rectangle(height, width);
-                        break;
-                    case 3:
+
+                    }
+                    case 3 -> {
                         System.out.println("enter the radius of circle");
                         double radius = scanner.nextDouble();
                         shape = new Circle(radius);
-                        break;
-                    case 4:
+
+                    }
+                    case 4 -> {
                         System.out.println("\nCalculation closed, Thank you! ");
                         System.exit(0);
-                    default:
+                    }
+                    default -> {
                         System.out.println("Invalid choice. Please try again.");
                         continue;
+                    }
                 }
                 printShapeDetails(shape);
 

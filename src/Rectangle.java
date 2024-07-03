@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+
 class Rectangle extends Shape {
     private double height;
     private double width;
